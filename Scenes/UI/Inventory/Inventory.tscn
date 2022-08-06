@@ -1,0 +1,876 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Assets/UI/Inventory/InventoryBg.png" type="Texture" id=1]
+[ext_resource path="res://Assets/UI/Inventory/Slot.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/UI/PlayerInv/EquiSlot.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/UI/PlayerInv/PlayerInv.gd" type="Script" id=4]
+[ext_resource path="res://Assets/UI/Inventory/Helmet.png" type="Texture" id=5]
+[ext_resource path="res://Assets/UI/Inventory/Ring.png" type="Texture" id=6]
+[ext_resource path="res://Assets/UI/Inventory/Weapon.png" type="Texture" id=7]
+[ext_resource path="res://Assets/UI/Inventory/Accessory.png" type="Texture" id=8]
+[ext_resource path="res://Assets/UI/Inventory/BodyArmor.png" type="Texture" id=9]
+[ext_resource path="res://Assets/UI/Inventory/SlotsBg.png" type="Texture" id=10]
+[ext_resource path="res://Assets/UI/Inventory/Boots.png" type="Texture" id=11]
+[ext_resource path="res://Scripts/UI/PlayerInv/Ring.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/UI/Inventory/InvSlot.gd" type="Script" id=13]
+
+[sub_resource type="Theme" id=4]
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 20, 20 )
+
+[sub_resource type="CanvasItemMaterial" id=2]
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 30, 30 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 30, 30 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 30, 30 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 30, 30 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 30, 30 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 30, 30 )
+
+[node name="PlayerInventory" type="Node2D"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -140.0, -110.0, -100.0, -70.0, -60.0, -30.0 ],
+"_edit_vertical_guides_": [ -90.0, -60.0, -55.0, -25.0, -20.0, 10.0 ]
+}
+
+[node name="Bg" type="TextureRect" parent="."]
+margin_left = -100.0
+margin_top = -150.0
+margin_right = 100.0
+margin_bottom = 150.0
+texture = ExtResource( 1 )
+
+[node name="SlotBg" type="TextureRect" parent="."]
+margin_left = -84.0
+margin_top = -18.0
+margin_right = 94.0
+margin_bottom = 138.0
+texture = ExtResource( 10 )
+
+[node name="Inv" type="GridContainer" parent="."]
+margin_left = -82.0
+margin_top = -16.0
+margin_right = 92.0
+margin_bottom = 136.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 0
+theme = SubResource( 4 )
+custom_constants/vseparation = 2
+custom_constants/hseparation = 2
+columns = 8
+
+[node name="Slot" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524289
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot2" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 22.0
+margin_right = 42.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot3" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 44.0
+margin_right = 64.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot4" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 66.0
+margin_right = 86.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot5" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 88.0
+margin_right = 108.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot6" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 110.0
+margin_right = 130.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot7" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 132.0
+margin_right = 152.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot8" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 154.0
+margin_right = 174.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot9" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_top = 22.0
+margin_right = 20.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot10" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 22.0
+margin_top = 22.0
+margin_right = 42.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot11" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 44.0
+margin_top = 22.0
+margin_right = 64.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot12" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 66.0
+margin_top = 22.0
+margin_right = 86.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot13" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 88.0
+margin_top = 22.0
+margin_right = 108.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot14" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 110.0
+margin_top = 22.0
+margin_right = 130.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot15" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 132.0
+margin_top = 22.0
+margin_right = 152.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot16" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 154.0
+margin_top = 22.0
+margin_right = 174.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot17" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_top = 44.0
+margin_right = 20.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot18" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 22.0
+margin_top = 44.0
+margin_right = 42.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot19" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 44.0
+margin_top = 44.0
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot20" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 66.0
+margin_top = 44.0
+margin_right = 86.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot21" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 88.0
+margin_top = 44.0
+margin_right = 108.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot22" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 110.0
+margin_top = 44.0
+margin_right = 130.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot23" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 132.0
+margin_top = 44.0
+margin_right = 152.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot24" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 154.0
+margin_top = 44.0
+margin_right = 174.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot25" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_top = 66.0
+margin_right = 20.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot26" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 22.0
+margin_top = 66.0
+margin_right = 42.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot27" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 44.0
+margin_top = 66.0
+margin_right = 64.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot28" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 66.0
+margin_top = 66.0
+margin_right = 86.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot29" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 88.0
+margin_top = 66.0
+margin_right = 108.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot30" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 110.0
+margin_top = 66.0
+margin_right = 130.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot31" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 132.0
+margin_top = 66.0
+margin_right = 152.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot32" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 154.0
+margin_top = 66.0
+margin_right = 174.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot33" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_top = 88.0
+margin_right = 20.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot34" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 22.0
+margin_top = 88.0
+margin_right = 42.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot35" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 44.0
+margin_top = 88.0
+margin_right = 64.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot36" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 66.0
+margin_top = 88.0
+margin_right = 86.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot37" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 88.0
+margin_top = 88.0
+margin_right = 108.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot38" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 110.0
+margin_top = 88.0
+margin_right = 130.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot39" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 132.0
+margin_top = 88.0
+margin_right = 152.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot40" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 154.0
+margin_top = 88.0
+margin_right = 174.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot41" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_top = 110.0
+margin_right = 20.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot42" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 22.0
+margin_top = 110.0
+margin_right = 42.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot43" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 44.0
+margin_top = 110.0
+margin_right = 64.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot44" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 66.0
+margin_top = 110.0
+margin_right = 86.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot45" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 88.0
+margin_top = 110.0
+margin_right = 108.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot46" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 110.0
+margin_top = 110.0
+margin_right = 130.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot47" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 132.0
+margin_top = 110.0
+margin_right = 152.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot48" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 154.0
+margin_top = 110.0
+margin_right = 174.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot49" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_top = 132.0
+margin_right = 20.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot50" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 22.0
+margin_top = 132.0
+margin_right = 42.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot51" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 44.0
+margin_top = 132.0
+margin_right = 64.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot52" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 66.0
+margin_top = 132.0
+margin_right = 86.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot53" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 88.0
+margin_top = 132.0
+margin_right = 108.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot54" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 110.0
+margin_top = 132.0
+margin_right = 130.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot55" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 132.0
+margin_top = 132.0
+margin_right = 152.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Slot56" type="Panel" parent="Inv"]
+show_behind_parent = true
+light_mask = 524288
+material = SubResource( 2 )
+margin_left = 154.0
+margin_top = 132.0
+margin_right = 174.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 13 )
+
+[node name="Equipements" type="Node2D" parent="."]
+
+[node name="RingR" type="Panel" parent="Equipements"]
+margin_left = -90.0
+margin_top = -140.0
+margin_right = -60.0
+margin_bottom = -110.0
+rect_min_size = Vector2( 30, 30 )
+custom_styles/panel = SubResource( 5 )
+script = ExtResource( 12 )
+
+[node name="RingL" type="Panel" parent="Equipements"]
+margin_left = -20.0
+margin_top = -140.0
+margin_right = 10.0
+margin_bottom = -110.0
+rect_min_size = Vector2( 30, 30 )
+custom_styles/panel = SubResource( 5 )
+script = ExtResource( 3 )
+
+[node name="Helmet" type="Panel" parent="Equipements"]
+margin_left = -55.0
+margin_top = -140.0
+margin_right = -25.0
+margin_bottom = -110.0
+rect_min_size = Vector2( 30, 30 )
+custom_styles/panel = SubResource( 6 )
+script = ExtResource( 3 )
+
+[node name="BodyArmor" type="Panel" parent="Equipements"]
+margin_left = -55.0
+margin_top = -100.0
+margin_right = -25.0
+margin_bottom = -70.0
+rect_min_size = Vector2( 30, 30 )
+custom_styles/panel = SubResource( 7 )
+script = ExtResource( 3 )
+
+[node name="WeaponR" type="Panel" parent="Equipements"]
+margin_left = -90.0
+margin_top = -100.0
+margin_right = -60.0
+margin_bottom = -70.0
+rect_min_size = Vector2( 30, 30 )
+custom_styles/panel = SubResource( 8 )
+script = ExtResource( 3 )
+
+[node name="WeaponL" type="Panel" parent="Equipements"]
+margin_left = -20.0
+margin_top = -100.0
+margin_right = 10.0
+margin_bottom = -70.0
+rect_min_size = Vector2( 30, 30 )
+custom_styles/panel = SubResource( 8 )
+script = ExtResource( 3 )
+
+[node name="Boots" type="Panel" parent="Equipements"]
+margin_left = -55.0
+margin_top = -60.0
+margin_right = -25.0
+margin_bottom = -30.0
+rect_min_size = Vector2( 30, 30 )
+custom_styles/panel = SubResource( 9 )
+script = ExtResource( 3 )
+
+[node name="AcessoryR" type="Panel" parent="Equipements"]
+margin_left = -90.0
+margin_top = -60.0
+margin_right = -60.0
+margin_bottom = -30.0
+rect_min_size = Vector2( 30, 30 )
+custom_styles/panel = SubResource( 10 )
+script = ExtResource( 3 )
+
+[node name="AcessoryL" type="Panel" parent="Equipements"]
+margin_left = -20.0
+margin_top = -60.0
+margin_right = 10.0
+margin_bottom = -30.0
+rect_min_size = Vector2( 30, 30 )
+custom_styles/panel = SubResource( 10 )
+script = ExtResource( 3 )
