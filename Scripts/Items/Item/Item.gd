@@ -4,7 +4,7 @@ class_name Item
 
 var tooltip: ToolTip
 onready var timer: Timer = $Timer
-
+onready var texture: TextureRect = $TextureRect
 
 var dale: int = 0
 
@@ -19,20 +19,25 @@ var properties: Dictionary = {
 
 func _ready() -> void:
 	if randi() % 2 == 0:
-		$TextureRect.texture = load("res://Assets/Items/Iron Sword.png")
+		texture.texture = load("res://Assets/Items/Iron Sword.png")
 	else:
-		$TextureRect.texture = load("res://Assets/Items/Tree Branch.png")
+		texture.texture = load("res://Assets/Items/Tree Branch.png")
 
 func _physics_process(delta: float) -> void:
 	if tooltip == null:
 		tooltip = get_tree().get_root().get_node("MainScene/tooltip")
 
 func set_size(new_size: Vector2) -> void:
-	var scale: Vector2 = new_size / $TextureRect.get_rect().size
+	var scale: Vector2 = new_size / texture.get_rect().size
 	set_scale(scale)
-	$TextureRect.set_begin(Vector2.ZERO)
-	$TextureRect.set_end(new_size)
+	texture.set_begin(Vector2.ZERO)
+	texture.set_end(new_size)
 
+func pick_from_slot() -> void:
+	texture.set_position(texture.get_rect().size / -2)
+
+func put_slot() -> void:
+	texture.set_position(Vector2.ZERO)
 
 func mouse_entered() -> void:
 	timer.start()
@@ -40,9 +45,8 @@ func mouse_entered() -> void:
 func set_properties(new_properties: Dictionary) -> void:
 	properties = new_properties
 
-
 func _check_mouse_position() -> bool:
-	var size: Vector2 = $TextureRect.get_rect().size
+	var size: Vector2 = texture.get_rect().size
 	
 	var rect: Rect2 = Rect2(global_position, size)
 	

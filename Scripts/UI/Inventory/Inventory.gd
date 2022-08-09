@@ -11,16 +11,17 @@ func slot_gui_input(event: InputEvent, slot: Slot) -> void:
 			if holding_item != null:
 				if !slot.item:
 					slot.put_into_slot(holding_item)
+					holding_item.put_slot()
 					holding_item = null
 				else:
 					var temp_item = slot.item
 					slot.pick_from_slot()
 					temp_item.global_position = event.global_position
-					slot.put_into_slot(holding_item)
 					holding_item = temp_item	
 			elif slot.item:
 				holding_item = slot.item
 				slot.pick_from_slot()
+				holding_item.pick_from_slot()
 				holding_item.global_position = get_global_mouse_position()
 	elif holding_item != null:
 		holding_item.is_holding = true
