@@ -29,11 +29,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/UI/PlayerInv/EquiSlot.gd"
 }, {
-"base": "Item",
-"class": "Equipament",
-"language": "GDScript",
-"path": "res://Scripts/Items/Equipament.gd"
-}, {
 "base": "Control",
 "class": "HealthBar",
 "language": "GDScript",
@@ -47,7 +42,12 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "Item",
 "language": "GDScript",
-"path": "res://Scripts/Items/Item/Item.gd"
+"path": "res://Scripts/Items/Item.gd"
+}, {
+"base": "Resource",
+"class": "ItemUtils",
+"language": "GDScript",
+"path": "res://Scripts/Utils/ItemUtils.gd"
 }, {
 "base": "Panel",
 "class": "Slot",
@@ -69,10 +69,10 @@ _global_script_class_icons={
 "Entity": "",
 "EntityLife": "",
 "EquiSlot": "",
-"Equipament": "",
 "HealthBar": "",
 "Inventory": "",
 "Item": "",
+"ItemUtils": "",
 "Slot": "",
 "TerrainGenerator": "",
 "ToolTip": ""

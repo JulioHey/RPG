@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/UI/Tooltips/Tooltip.gd" type="Script" id=1]
 [ext_resource path="res://Assets/UI/Inventory/Slot.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fonts/Broken Console Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Fonts/Broken Console Regular.otf" type="DynamicFontData" id=4]
 
 [sub_resource type="CanvasItemMaterial" id=2]
 render_priority = 1
@@ -9,6 +11,13 @@ render_priority = 1
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 20, 20 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 14
+font_data = ExtResource( 4 )
 
 [node name="Container" type="Node2D"]
 z_index = 2
@@ -25,4 +34,8 @@ custom_styles/panel = SubResource( 1 )
 margin_right = 150.0
 margin_bottom = 40.0
 mouse_filter = 2
+custom_fonts/bold_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+fit_content_height = true
 scroll_active = false

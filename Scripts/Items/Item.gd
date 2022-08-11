@@ -2,22 +2,32 @@ extends Node2D
 
 class_name Item
 
+onready var Util = load("res://Scripts/Utils/ItemUtils.gd")
+		
 var tooltip: ToolTip
 onready var timer: Timer = $Timer
 onready var texture: TextureRect = $TextureRect
 
-var dale: int = 0
 
+var is_tooltiped: bool = false
 var is_holding: bool = false
 
-var properties: Dictionary = {
-	"Strength": "+20",
-	"Agi": "+20",
-	"Mana": "+20",
-	"Health": "+20",
-}
+var modifiers: Array = [
+	"Strength +20",
+	"Agi +20",
+	"Mana +20",
+	"Health +20",
+]
+
+var item_type: String
+
+var item_title: String = "Meu Item Bala"
+
+func generate_new_item(new_item_type: int) -> void:
+	item_type = Util.item_types[new_item_type]
 
 func _ready() -> void:
+	generate_new_item(randi() % 6)
 	if randi() % 2 == 0:
 		texture.texture = load("res://Assets/Items/Iron Sword.png")
 	else:
@@ -42,9 +52,6 @@ func put_slot() -> void:
 func mouse_entered() -> void:
 	timer.start()
 
-func set_properties(new_properties: Dictionary) -> void:
-	properties = new_properties
-
 func _check_mouse_position() -> bool:
 	var size: Vector2 = texture.get_rect().size
 	
@@ -54,10 +61,22 @@ func _check_mouse_position() -> bool:
 	
 func _on_Timer_timeout():
 	timer.set_wait_time(0.1)
-	tooltip.update_text(properties)
 	if !_check_mouse_position() || is_holding:
 		timer.set_wait_time(0.5)
 		tooltip.set_visible(false)
 		timer.stop()
+		is_tooltiped = false
 	else:
+		if !is_tooltiped: 
+			is_tooltiped = true
+			tooltip.update_text(_construct_tooltip_bbcode(), modifiers.size() + 3)
 		timer.start()
+
+func _construct_tooltip_bbcode() -> String:
+	var initial_string: String = "[b][center]"+item_title+"[/center][/b]"
+	initial_string += "[center]"+item_type+"[center]"
+	for modifier in modifiers:
+		initial_string += "[center]"+modifier+"[/center]"
+	
+	return initial_string
+

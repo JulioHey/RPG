@@ -1,8 +1,8 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Assets/UI/Inventory/InventoryBg.png" type="Texture" id=1]
 [ext_resource path="res://Assets/UI/Inventory/Slot.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/UI/PlayerInv/EquiSlot.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/UI/PlayerInv/Boots.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/UI/PlayerInv/PlayerInv.gd" type="Script" id=4]
 [ext_resource path="res://Assets/UI/Inventory/Helmet.png" type="Texture" id=5]
 [ext_resource path="res://Assets/UI/Inventory/Ring.png" type="Texture" id=6]
@@ -13,6 +13,10 @@
 [ext_resource path="res://Assets/UI/Inventory/Boots.png" type="Texture" id=11]
 [ext_resource path="res://Scripts/UI/PlayerInv/Ring.gd" type="Script" id=12]
 [ext_resource path="res://Scripts/UI/Inventory/InvSlot.gd" type="Script" id=13]
+[ext_resource path="res://Scripts/UI/PlayerInv/BodyArmor.gd" type="Script" id=14]
+[ext_resource path="res://Scripts/UI/PlayerInv/Helmet.gd" type="Script" id=15]
+[ext_resource path="res://Scripts/UI/PlayerInv/Weapon.gd" type="Script" id=16]
+[ext_resource path="res://Scripts/UI/PlayerInv/Accessory.gd" type="Script" id=17]
 
 [sub_resource type="Theme" id=4]
 
@@ -810,7 +814,7 @@ margin_right = 10.0
 margin_bottom = -110.0
 rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 5 )
-script = ExtResource( 3 )
+script = ExtResource( 12 )
 
 [node name="Helmet" type="Panel" parent="Equipements"]
 margin_left = -55.0
@@ -819,7 +823,7 @@ margin_right = -25.0
 margin_bottom = -110.0
 rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 6 )
-script = ExtResource( 3 )
+script = ExtResource( 15 )
 
 [node name="BodyArmor" type="Panel" parent="Equipements"]
 margin_left = -55.0
@@ -828,7 +832,7 @@ margin_right = -25.0
 margin_bottom = -70.0
 rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 7 )
-script = ExtResource( 3 )
+script = ExtResource( 14 )
 
 [node name="WeaponR" type="Panel" parent="Equipements"]
 margin_left = -90.0
@@ -837,7 +841,7 @@ margin_right = -60.0
 margin_bottom = -70.0
 rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 8 )
-script = ExtResource( 3 )
+script = ExtResource( 16 )
 
 [node name="WeaponL" type="Panel" parent="Equipements"]
 margin_left = -20.0
@@ -846,7 +850,7 @@ margin_right = 10.0
 margin_bottom = -70.0
 rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 8 )
-script = ExtResource( 3 )
+script = ExtResource( 16 )
 
 [node name="Boots" type="Panel" parent="Equipements"]
 margin_left = -55.0
@@ -864,7 +868,7 @@ margin_right = -60.0
 margin_bottom = -30.0
 rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 10 )
-script = ExtResource( 3 )
+script = ExtResource( 17 )
 
 [node name="AcessoryL" type="Panel" parent="Equipements"]
 margin_left = -20.0
@@ -873,4 +877,4 @@ margin_right = 10.0
 margin_bottom = -30.0
 rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 10 )
-script = ExtResource( 3 )
+script = ExtResource( 17 )
