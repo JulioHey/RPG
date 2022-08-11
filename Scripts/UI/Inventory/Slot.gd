@@ -6,10 +6,13 @@ var default_style: StyleBoxTexture = null
 var empty_style: StyleBoxTexture = null
 
 var ItemClass = preload("res://Scenes/Items/Item.tscn")
+onready var Util = load("res://Scripts/Utils/ItemUtils.gd")
 
-var item: Node2D = null
+var item: Item = null
 
 var base_size: int = 20
+
+var slot_type: String = "Any"
 
 func refresh_style() -> void:
 	if item == null:
@@ -26,7 +29,7 @@ func pick_from_slot() -> void:
 	item = null
 	refresh_style()
 
-func put_into_slot(new_item: Item) -> void:
+func put_into_slot(new_item: Node2D) -> void:
 	item = new_item
 	item.position = Vector2(0,0)
 	var player_node = find_parent("player")
@@ -35,9 +38,14 @@ func put_into_slot(new_item: Item) -> void:
 	add_child(item)
 	
 	refresh_style()
-	
+
 func put_scale(item: Item) -> void:
 	item.set_size(get_rect().size)
 
 func pick_size(item: Item) -> void:
 	item.set_size(Vector2(20,20))
+
+func accepts(item_type: String) -> bool:
+	if slot_type == "Any":
+		return true
+	return slot_type == item_type

@@ -7,6 +7,8 @@ onready var _animation = $AnimationPlayer
 onready var _inventory = $Inventory
 onready var holding_item: Item = null
 
+var slot_name: String = "Helmet"
+
 var _inventory_visibility: bool = false
 
 var ball: Node2D

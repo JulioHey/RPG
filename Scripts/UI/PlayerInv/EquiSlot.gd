@@ -1,6 +1,7 @@
 extends Slot
 
-var slot_name: String = "Helmet"
+class_name EquiSlot
+
 
 var base_str: String = "res://Assets/UI/Inventory/%s.png"
 
@@ -15,4 +16,4 @@ onready var textures: Dictionary = {
 	"BodyArmor": preload("res://Assets/UI/Inventory/BodyArmor.png"),
 }
 
-class_name EquiSlot
+

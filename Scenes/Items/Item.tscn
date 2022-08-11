@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Scripts/Items/Item/Item.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Items/Item.gd" type="Script" id=1]
 
 [node name="Item" type="Node2D"]
 show_behind_parent = true
