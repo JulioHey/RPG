@@ -2,12 +2,10 @@ extends Node2D
 
 class_name Item
 
-onready var Util = load("res://Scripts/Utils/ItemUtils.gd")
 		
 var tooltip: ToolTip
 onready var timer: Timer = $Timer
 onready var texture: TextureRect = $TextureRect
-
 
 var is_tooltiped: bool = false
 var is_holding: bool = false
@@ -19,12 +17,12 @@ var modifiers: Array = [
 	"Health +20",
 ]
 
-var item_type: String
+var item_type: int
 
 var item_title: String = "Meu Item Bala"
 
 func generate_new_item(new_item_type: int) -> void:
-	item_type = Util.item_types[new_item_type]
+	item_type = new_item_type
 
 func _ready() -> void:
 	generate_new_item(randi() % 6)
@@ -67,14 +65,14 @@ func _on_Timer_timeout():
 		timer.stop()
 		is_tooltiped = false
 	else:
-		if !is_tooltiped: 
+		if !is_tooltiped:
 			is_tooltiped = true
 			tooltip.update_text(_construct_tooltip_bbcode(), modifiers.size() + 3)
 		timer.start()
 
 func _construct_tooltip_bbcode() -> String:
 	var initial_string: String = "[b][center]"+item_title+"[/center][/b]"
-	initial_string += "[center]"+item_type+"[center]"
+	initial_string += "[center]"+ItemUtils.ITEM_TYPES_STR[item_type]+"[center]"
 	for modifier in modifiers:
 		initial_string += "[center]"+modifier+"[/center]"
 	

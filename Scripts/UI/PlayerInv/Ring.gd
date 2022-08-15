@@ -3,11 +3,10 @@ extends EquiSlot
 
 func _ready():
 	base_size = 30
-	slot_type = "Ring"
 	
 	default_style = StyleBoxTexture.new()
 	empty_style = StyleBoxTexture.new()
 	
 	default_style.texture = default_tex
-	empty_style.texture = textures[slot_type]
+	empty_style.texture = textures[slot]
 	refresh_style()

@@ -27,7 +27,4 @@ func _set_text_from_item(properties: String, number_lines: int) -> void:
 	label.set_begin(Vector2(PADDING, PADDING))
 	panel.set_end(Vector2(WIDTH + 2 * PADDING, height + 2 * PADDING))
 	label.set_end(Vector2(PADDING + WIDTH, height + PADDING))
-	
 	label.parse_bbcode(properties)
-	
-	
