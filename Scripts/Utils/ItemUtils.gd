@@ -1,15 +1,7 @@
-extends Resource
+extends Node
 
-class_name ItemUtils
-
-const HELMET = 0
-const BODY_ARMOR = 1
-const WEAPON = 2
-const RING = 3
-const ACCESSORY = 5
-const BOOTS = 5
-
-enum ItemTypes {
+enum ITEM_TYPES {
+	ANY = -1,
 	HELMET,
 	BODY_ARMOR,
 	WEAPON,
@@ -18,7 +10,7 @@ enum ItemTypes {
 	BOOTS,
 }
 
-const item_types: Array = [
+const ITEM_TYPES_STR: Array = [
 	"Helmet",
 	"BodyArmor",
 	"Weapon",

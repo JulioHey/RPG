@@ -44,11 +44,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Items/Item.gd"
 }, {
-"base": "Resource",
-"class": "ItemUtils",
-"language": "GDScript",
-"path": "res://Scripts/Utils/ItemUtils.gd"
-}, {
 "base": "Panel",
 "class": "Slot",
 "language": "GDScript",
@@ -72,7 +67,6 @@ _global_script_class_icons={
 "HealthBar": "",
 "Inventory": "",
 "Item": "",
-"ItemUtils": "",
 "Slot": "",
 "TerrainGenerator": "",
 "ToolTip": ""
@@ -87,6 +81,7 @@ boot_splash/use_filter=false
 [autoload]
 
 Global="*res://Scripts/Global.gd"
+ItemUtils="*res://Scripts/Utils/ItemUtils.gd"
 
 [display]
 

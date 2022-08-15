@@ -93,6 +93,7 @@ margin_bottom = 20.0
 rect_min_size = Vector2( 20, 20 )
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot2" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -105,6 +106,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot3" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -117,6 +119,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot4" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -129,6 +132,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot5" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -141,6 +145,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot6" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -153,6 +158,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot7" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -165,6 +171,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot8" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -177,6 +184,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot9" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -189,6 +197,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot10" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -202,6 +211,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot11" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -215,6 +225,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot12" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -228,6 +239,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot13" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -241,6 +253,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot14" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -254,6 +267,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot15" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -267,6 +281,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot16" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -280,6 +295,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot17" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -292,6 +308,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot18" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -305,6 +322,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot19" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -318,6 +336,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot20" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -331,6 +350,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot21" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -344,6 +364,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot22" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -357,6 +378,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot23" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -370,6 +392,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot24" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -383,6 +406,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot25" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -395,6 +419,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot26" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -408,6 +433,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot27" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -421,6 +447,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot28" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -434,6 +461,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot29" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -447,6 +475,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot30" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -460,6 +489,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot31" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -473,6 +503,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot32" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -486,6 +517,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot33" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -498,6 +530,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot34" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -511,6 +544,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot35" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -524,6 +558,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot36" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -537,6 +572,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot37" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -550,6 +586,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot38" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -563,6 +600,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot39" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -576,6 +614,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot40" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -589,6 +628,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot41" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -601,6 +641,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot42" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -614,6 +655,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot43" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -627,6 +669,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot44" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -640,6 +683,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot45" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -653,6 +697,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot46" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -666,6 +711,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot47" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -679,6 +725,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot48" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -692,6 +739,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot49" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -704,6 +752,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot50" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -717,6 +766,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot51" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -730,6 +780,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot52" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -743,6 +794,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot53" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -756,6 +808,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot54" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -769,6 +822,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot55" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -782,6 +836,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Slot56" type="Panel" parent="Inv"]
 show_behind_parent = true
@@ -795,6 +850,7 @@ rect_min_size = Vector2( 20, 20 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 13 )
+slot = -1
 
 [node name="Equipements" type="Node2D" parent="."]
 
@@ -806,6 +862,7 @@ margin_bottom = -110.0
 rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 5 )
 script = ExtResource( 12 )
+slot = 3
 
 [node name="RingL" type="Panel" parent="Equipements"]
 margin_left = -20.0
@@ -815,6 +872,7 @@ margin_bottom = -110.0
 rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 5 )
 script = ExtResource( 12 )
+slot = 3
 
 [node name="Helmet" type="Panel" parent="Equipements"]
 margin_left = -55.0
@@ -833,6 +891,7 @@ margin_bottom = -70.0
 rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 7 )
 script = ExtResource( 14 )
+slot = 1
 
 [node name="WeaponR" type="Panel" parent="Equipements"]
 margin_left = -90.0
@@ -842,6 +901,7 @@ margin_bottom = -70.0
 rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 8 )
 script = ExtResource( 16 )
+slot = 2
 
 [node name="WeaponL" type="Panel" parent="Equipements"]
 margin_left = -20.0
@@ -851,6 +911,7 @@ margin_bottom = -70.0
 rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 8 )
 script = ExtResource( 16 )
+slot = 2
 
 [node name="Boots" type="Panel" parent="Equipements"]
 margin_left = -55.0
@@ -860,6 +921,7 @@ margin_bottom = -30.0
 rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 9 )
 script = ExtResource( 3 )
+slot = 5
 
 [node name="AcessoryR" type="Panel" parent="Equipements"]
 margin_left = -90.0
@@ -869,6 +931,7 @@ margin_bottom = -30.0
 rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 10 )
 script = ExtResource( 17 )
+slot = 4
 
 [node name="AcessoryL" type="Panel" parent="Equipements"]
 margin_left = -20.0
@@ -878,3 +941,4 @@ margin_bottom = -30.0
 rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 10 )
 script = ExtResource( 17 )
+slot = 4

@@ -6,13 +6,13 @@ var default_style: StyleBoxTexture = null
 var empty_style: StyleBoxTexture = null
 
 var ItemClass = preload("res://Scenes/Items/Item.tscn")
-onready var Util = load("res://Scripts/Utils/ItemUtils.gd")
 
 var item: Item = null
 
 var base_size: int = 20
 
-var slot_type: String = "Any"
+export (ItemUtils.ITEM_TYPES) var slot
+
 
 func refresh_style() -> void:
 	if item == null:
@@ -45,7 +45,7 @@ func put_scale(item: Item) -> void:
 func pick_size(item: Item) -> void:
 	item.set_size(Vector2(20,20))
 
-func accepts(item_type: String) -> bool:
-	if slot_type == "Any":
+func accepts(item_type: int) -> bool:
+	if slot == ItemUtils.ITEM_TYPES.ANY:
 		return true
-	return slot_type == item_type
+	return slot == item_type
