@@ -19,7 +19,7 @@ var modifiers: Array = [
 
 var item_type: int
 
-var item_title: String = "Meu Item Bala"
+var item_title: String = "Item Pika"
 
 func generate_new_item(new_item_type: int) -> void:
 	item_type = new_item_type
@@ -67,14 +67,12 @@ func _on_Timer_timeout():
 	else:
 		if !is_tooltiped:
 			is_tooltiped = true
-			tooltip.update_text(_construct_tooltip_bbcode(), modifiers.size() + 3)
+			tooltip.update_text(_construct_tooltip_dict())
 		timer.start()
 
-func _construct_tooltip_bbcode() -> String:
-	var initial_string: String = "[b][center]"+item_title+"[/center][/b]"
-	initial_string += "[center]"+ItemUtils.ITEM_TYPES_STR[item_type]+"[center]"
-	for modifier in modifiers:
-		initial_string += "[center]"+modifier+"[/center]"
-	
-	return initial_string
+func _construct_tooltip_dict() -> Dictionary:
+	return {
+		"Title": item_title,
+		"Description": modifiers
+	}
 
