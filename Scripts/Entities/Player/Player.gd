@@ -94,18 +94,12 @@ func checkActions() -> void:
 
 func add_equip(item: Item, slot: String):
 	_equipements[slot] = item
-	update_player_modifiers()
+	player_status_controller.add_item_to_calc(item, ModifierUtils.CHANGES_TO_PLAYER.EQUIPS, slot)
 
 func remove_equip(slot: String):
 	_equipements[slot] = null
-	update_player_modifiers()
+	player_status_controller.add_item_to_calc(null, ModifierUtils.CHANGES_TO_PLAYER.EQUIPS, slot)
 
-func update_player_modifiers() -> void:
-	player_status_controller.clear_status()
-	for equipement in _equipements.values():
-		if equipement:
-			for modifier in equipement.modifiers:
-				player_status_controller.add_status_modifier(modifier)		
-	
-	player_status_controller.update_status()
+
+
 

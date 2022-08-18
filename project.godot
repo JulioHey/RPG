@@ -101,6 +101,7 @@ boot_splash/use_filter=false
 Global="*res://Scripts/Utils/Global.gd"
 ItemUtils="*res://Scripts/Utils/ItemUtils.gd"
 StatusUtils="*res://Scripts/Utils/StatusUtils.gd"
+ModifierUtils="*res://Scripts/Utils/ModifierUtils.gd"
 
 [display]
 
