@@ -44,10 +44,25 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Items/Item.gd"
 }, {
+"base": "Resource",
+"class": "Modifier",
+"language": "GDScript",
+"path": "res://Scripts/Items/Modifiers/Modifier.gd"
+}, {
+"base": "Resource",
+"class": "PlayerStatusController",
+"language": "GDScript",
+"path": "res://Scripts/Entities/Player/PlayerStatus.gd"
+}, {
 "base": "Panel",
 "class": "Slot",
 "language": "GDScript",
 "path": "res://Scripts/UI/Inventory/Slot.gd"
+}, {
+"base": "Modifier",
+"class": "StatusModifer",
+"language": "GDScript",
+"path": "res://Scripts/Items/Modifiers/StatusModifiers.gd"
 }, {
 "base": "Resource",
 "class": "TerrainGenerator",
@@ -67,7 +82,10 @@ _global_script_class_icons={
 "HealthBar": "",
 "Inventory": "",
 "Item": "",
+"Modifier": "",
+"PlayerStatusController": "",
 "Slot": "",
+"StatusModifer": "",
 "TerrainGenerator": "",
 "ToolTip": ""
 }
@@ -80,9 +98,10 @@ boot_splash/use_filter=false
 
 [autoload]
 
-Global="*res://Scripts/Global.gd"
+Global="*res://Scripts/Utils/Global.gd"
 ItemUtils="*res://Scripts/Utils/ItemUtils.gd"
 StatusUtils="*res://Scripts/Utils/StatusUtils.gd"
+ModifierUtils="*res://Scripts/Utils/ModifierUtils.gd"
 
 [display]
 

@@ -8,9 +8,9 @@ onready var description_panel: Panel = $DescriptionPanel
 onready var description_label: RichTextLabel = description_panel.get_child(0)
 
 const PADDING: int = 10
-const WIDTH: int = 150
+const WIDTH: int = 200
 
-const MAX_CHAR_TITLE_LINE: int = 13
+const MAX_CHAR_TITLE_LINE: int = 15
 
 func _ready() -> void:
 	description_label.set_fit_content_height(true) 
@@ -70,8 +70,6 @@ func _set_description(descriptions: Array, end: int) -> void:
 		bb_code += value[0]
 		n_lines += value[1]
 	
-	print(n_lines)
-		
 	description_label.parse_bbcode(bb_code)
 	description_panel.set_begin(Vector2(0, end))
 	description_panel.set_end(Vector2(WIDTH + 2 * PADDING, end + n_lines * 14 + PADDING))

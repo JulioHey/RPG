@@ -5,21 +5,26 @@ onready var Ball = preload("res://Scenes/Spells/Ball.tscn")
 
 onready var _animation = $AnimationPlayer
 onready var _inventory = $Inventory
-onready var holding_item: Item = null
+var _equipements: Dictionary = {}
 
-var slot_name: String = "Helmet"
+onready var holding_item: Item = null
 
 var _inventory_visibility: bool = false
 
 var ball: Node2D
+
+var player_status_controller: PlayerStatusController
 
 func _ready() -> void:
 	ball = Ball.instance()
 	add_child(ball)
 	_start_variables()
 	_update_super_classes()
+	_start_player_variables()
 
-	
+func _start_player_variables() -> void:
+	player_status_controller = PlayerStatusController.new()
+
 func _update_super_classes() -> void:
 	set_name("player")
 	update_health_bar()
@@ -40,8 +45,6 @@ func _physics_process(delta: float) -> void:
 func _update_player(delta) -> void:
 	checkMovement(delta)
 	checkActions()
-	if Input.is_action_pressed("shot"):
-		ball.shot()
 	_last_attack -= delta
 
 func checkMovement(delta: float) -> void:
@@ -80,10 +83,23 @@ func get_health_bar_off_set() -> Vector2:
 	return (center_of_screen / 2) * -1
 
 func checkActions() -> void:
+	if Input.is_action_just_pressed("shot"):
+		ball.shot()
 	if Input.is_action_just_released("open_inventory"):
 		if _inventory_visibility:
 			_inventory.set_scale(Vector2.ZERO)
 		else:
 			_inventory.set_scale(Vector2(1,1))
 		_inventory_visibility = !_inventory_visibility
-		
+
+func add_equip(item: Item, slot: String):
+	_equipements[slot] = item
+	player_status_controller.add_item_to_calc(item, ModifierUtils.CHANGES_TO_PLAYER.EQUIPS, slot)
+
+func remove_equip(slot: String):
+	_equipements[slot] = null
+	player_status_controller.add_item_to_calc(null, ModifierUtils.CHANGES_TO_PLAYER.EQUIPS, slot)
+
+
+
+

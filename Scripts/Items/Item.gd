@@ -11,21 +11,21 @@ var is_tooltiped: bool = false
 var is_holding: bool = false
 
 var modifiers: Array = [
-	"Strength +20",
-	"Agi +20",
-	"Mana +20",
-	"Health +20",
+	StatusModifer.new(),
+	StatusModifer.new(),
+	StatusModifer.new(),
+	StatusModifer.new(),
 ]
 
 var item_type: int
 
 var item_title: String = "Item Pika"
 
-func generate_new_item(new_item_type: int) -> void:
-	item_type = new_item_type
+func generate_new_item() -> void:
+	item_type = randi() % 6
 
 func _ready() -> void:
-	generate_new_item(randi() % 6)
+	generate_new_item()
 	if randi() % 2 == 0:
 		texture.texture = load("res://Assets/Items/Iron Sword.png")
 	else:
@@ -71,8 +71,14 @@ func _on_Timer_timeout():
 		timer.start()
 
 func _construct_tooltip_dict() -> Dictionary:
+	var description: Array = []
+	description.append(ItemUtils.ITEM_TYPES_STR[item_type])
+	
+	for modifier in modifiers:
+		description.append(modifier._to_string())
+		
 	return {
 		"Title": item_title,
-		"Description": modifiers
+		"Description": description
 	}
 
