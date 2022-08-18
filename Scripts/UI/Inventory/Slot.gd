@@ -14,6 +14,9 @@ var base_size: int = 20
 export (ItemUtils.ITEM_TYPES) var slot
 
 
+func refresh(player_node: Node2D, item_node: Item, added: bool) -> void:
+	refresh_style()
+
 func refresh_style() -> void:
 	if item == null:
 		set("custom_styles/panel", empty_style)
@@ -27,7 +30,7 @@ func pick_from_slot() -> void:
 	var player_node = find_parent("player")
 	player_node.add_child(item)
 	item = null
-	refresh_style()
+	refresh(player_node, item, false)
 
 func put_into_slot(new_item: Node2D) -> void:
 	item = new_item
@@ -37,7 +40,7 @@ func put_into_slot(new_item: Node2D) -> void:
 	put_scale(item)
 	add_child(item)
 	
-	refresh_style()
+	refresh(player_node, item, true)
 
 func put_scale(item: Item) -> void:
 	item.set_size(get_rect().size)

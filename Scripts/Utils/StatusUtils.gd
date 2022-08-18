@@ -1,6 +1,6 @@
 extends Node
 
-enum Status {
+enum STATUS {
 	STRENGTH = 0,
 	AGILITY,
 	INTELEGENCY

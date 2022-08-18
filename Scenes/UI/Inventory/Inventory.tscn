@@ -873,6 +873,7 @@ rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 5 )
 script = ExtResource( 12 )
 slot = 3
+side = 1
 
 [node name="Helmet" type="Panel" parent="Equipements"]
 margin_left = -55.0
@@ -912,6 +913,7 @@ rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 8 )
 script = ExtResource( 16 )
 slot = 2
+side = 1
 
 [node name="Boots" type="Panel" parent="Equipements"]
 margin_left = -55.0
@@ -942,3 +944,4 @@ rect_min_size = Vector2( 30, 30 )
 custom_styles/panel = SubResource( 10 )
 script = ExtResource( 17 )
 slot = 4
+side = 1
